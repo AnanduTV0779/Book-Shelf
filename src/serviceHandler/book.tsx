@@ -7,7 +7,6 @@ const instance = axios.create({
 const searchURL: string = "/search.json";
 
 const appendURLParams = (endpoint: string, value: string) => {
-  console.log("string data", endpoint);
   const url = new URL(instance.getUri() + endpoint);
   url.searchParams.append("q", value);
   return url.toString();
